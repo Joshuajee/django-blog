@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block page_title %} Title {% endblock %}</title>
+
+        <link rel="stylesheet" href="{% static 'blog/css/base.css' %}" />
+
+        {% block page_css %} {% endblock %}
+    </head>
+    <body>
+
+        <nav class="top-nav">
+
+
+        </nav>
+
+
+        {% block page_content %} {% endblock %}
+    </body>
+    {% block page_js %} {% endblock %}
+</html>

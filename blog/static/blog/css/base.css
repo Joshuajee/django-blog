@@ -1,0 +1,11 @@
+body {
+    margin: 0px;
+    background-color: black;
+    color: white;
+}
+
+.top-nav {
+    background-color: #171717;
+    height: 80px;
+    width: 100%;
+}
