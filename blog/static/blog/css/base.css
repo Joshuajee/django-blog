@@ -2,10 +2,55 @@ body {
     margin: 0px;
     background-color: black;
     color: white;
+    overflow-x: hidden;
 }
 
 .top-nav {
     background-color: #171717;
-    height: 80px;
+    height: 60px;
     width: 100%;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+
+.tab-nav {
+    width: 100%;
+}
+
+.tab-nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 40px;
+    gap: 26px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+
+
+.tab-nav ul a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.tab-nav ul a:hover {
+    color: blue;
+}
+
+.tab-nav ul a:active {
+    color: blue;
+    font-weight: bold;
 }

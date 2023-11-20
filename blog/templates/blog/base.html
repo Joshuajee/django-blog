@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="{% static 'blog/css/base.css' %}" />
 
         {% block page_css %} {% endblock %}
+        
     </head>
     <body>
 
@@ -17,8 +18,10 @@
 
         </nav>
 
+        <main class="container">
+            {% block page_content %} {% endblock %}
+        </main>
 
-        {% block page_content %} {% endblock %}
     </body>
     {% block page_js %} {% endblock %}
 </html>

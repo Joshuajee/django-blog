@@ -1,0 +1,45 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block page_title  %} {{post.title}} {% endblock %}
+
+{% block page_css %} 
+    <link rel="stylesheet" href="{% static 'blog/css/post.css' %}" />
+{% endblock %}
+
+{% block page_content %} 
+    
+    <div class="post">
+
+        <!-- Author section -->
+        <div class="author-section">
+
+            <img class="profile-img" height="80px" width="80px" src="{% get_static_prefix %}blog/images/{{post.author_img}}" alt="profile"  />
+
+            <div>
+                <h4>{{ post.author }}</h4>
+                <h5>{{ post.date | timesince }} ago</h5>
+            </div>
+
+        </div>
+
+        <!-- Post section -->
+
+        <div class="post-section">
+
+            <h1> {{post.title}} </h1>
+
+            <p>
+                {{post.content | linebreaks }}
+            </p>
+
+        </div>
+
+
+
+    </div>
+
+
+
+{% endblock %}
+

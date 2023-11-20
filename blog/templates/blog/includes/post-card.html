@@ -1,0 +1,31 @@
+{% load static %}
+
+<div class="post-card">
+
+    <!-- Author section -->
+    <div class="author-section">
+
+
+        <img class="profile-img" height="40px" width="40px" src="{% get_static_prefix %}blog/images/{{post.author_img}}" alt="profile"  />
+
+
+        <div>
+            <h4>{{ post.author }}</h4>
+            <h5>{{ post.date | timesince }} age</h5>
+        </div>
+
+    </div>
+
+    <!-- Post section -->
+
+    <div class="post-section">
+
+        <h3> 
+            <a href="post/{{post.slug}}">{{post.title}}</a>
+        </h3>
+
+    </div>
+
+
+
+</div>

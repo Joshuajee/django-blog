@@ -1,0 +1,78 @@
+.post-card {
+    background-color: #171717;
+    border-radius: 6px;
+    padding: 24px;
+    margin: 10px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.post-card a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.post-card h3, h4, h5 {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.post-card .author-section {
+    display: flex;
+    gap: 4px;
+}
+
+.post-card .author-section div {
+    display: block;
+    height: 50px;
+    padding-top: 4px;
+}
+
+
+.post-card .post-section {
+    margin-left: 46px;
+}
+
+
+.profile-img {
+    border-radius: 50%;
+}
+
+
+
+.post {
+    background-color: #171717;
+    border-radius: 6px;
+    padding: 24px;
+    margin: 10px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.post h1 {
+    font-size: 36px;
+}
+
+
+.post h3, h4, h5 {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.post .author-section {
+    display: flex;
+    gap: 4px;
+}
+
+.post .author-section div {
+    display: block;
+    height: 50px;
+    padding-top: 4px;
+}
+
+
+.post .post-section {
+    margin-left: 46px;
+}
