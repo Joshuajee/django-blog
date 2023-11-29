@@ -2,7 +2,7 @@ from datetime import datetime
 
 post_data  = [
     {
-        "slug": "aliquam-vel-est-ornare-feugiat",
+        "slug": "aliquam-vel-est-ornare-feugiat-1",
         "author": "John",
         "author_img": "profile.png",
         "title": "Aliquam vel est ornare, feugiat orci at, blandit ligula. Nam pulvinar iaculis lacinia. Aliquam ornare.",
@@ -23,7 +23,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
         '''
     },
     {
-        "slug": "mauris-euismod-justo-ac-consequat",
+        "slug": "mauris-euismod-justo-ac-consequat-1",
         "author": "Isaac",
         "author_img": "profile3.jpg",
         "title": "Mauris euismod justo ac consequat aliquet. Duis mattis ipsum eget rhoncus tincidunt. Integer ligula sem.",
@@ -44,7 +44,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
         '''
     },
     {
-        "slug": "neque-porro-quisquam-est-qui-dolorem",
+        "slug": "neque-porro-quisquam-est-qui-dolorem-1",
         "author": "Daniel",
         "author_img": "profile.png",
         "title": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
@@ -65,7 +65,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
         ''',
     },
     {
-        "slug": "lorem-ipsum-dolor-sit-amet",
+        "slug": "lorem-ipsum-dolor-sit-amet-1",
         "author": "Josh",
         "author_img": "profile2.jpg",
         "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -86,7 +86,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
         ''',
     },
     {
-        "slug": "excepteur-sint-occaecat-cupidatat-non-proident",
+        "slug": "excepteur-sint-occaecat-cupidatat-non-proident-1",
         "author": "Moses",
         "author_img": "profile.png",
         "title": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
