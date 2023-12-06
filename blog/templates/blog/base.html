@@ -15,6 +15,19 @@
 
         <nav class="top-nav">
 
+            <a href="/">My Blog</a>
+
+            {% if user.is_authenticated %}
+                <div>
+                    <a href="/create-post"> <button>Create Post</button> </a>
+                    <a href="/logout"> <button>Logout</button> </a>
+                </div>
+            {% else %}
+                <div>
+                    <a href="/signup"> <button>Sign Up</button> </a>
+                    <a href="/login"> <button>Login</button> </a>
+                </div>
+            {% endif %}
 
         </nav>
 

@@ -1,0 +1,31 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block page_title  %} Create Post {% endblock %}
+
+{% block page_css %} 
+    <link rel="stylesheet" href="{% static 'blog/css/post-form.css' %}" />
+{% endblock %}
+
+{% block page_content %} 
+
+    <form class="post-form" action="/create-post" method="post">
+
+        {% csrf_token %}
+
+        <label for="author">Author</label>
+
+        <input id="author" class="author" name="author" />
+
+        <label for="title">Title</label>
+
+        <input id="title" class="title" name="title" />
+
+        <textarea class="content" name="content"> </textarea>
+
+        <button>Submit</button>
+
+    </form>
+
+{% endblock %}
+

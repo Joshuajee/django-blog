@@ -6,6 +6,10 @@ urlpatterns = [
     path("latest/", views.latest),
     path("top/", views.top),
     path("post/<slug:slug>", views.post),
-    path("create-post", views.create_post)
+    path("create-post", views.create_post),
+    path("signup/", views.signup),
+    path("login/", views.login_view),
+    path("logout/", views.logout_view)
 ]
+
 

@@ -1,0 +1,23 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block page_title  %} Myblog {% endblock %}
+
+{% block page_css %} 
+    <link rel="stylesheet" href="{% static 'blog/css/auth.css' %}" />
+{% endblock %}
+
+{% block page_content %} 
+
+    <form method="post" action="/login/">
+        {% if error %}
+            <h1>{{ error }}</h1>
+        {% endif %}
+        {% csrf_token %}
+        <h1>Login</h1>
+        {{ form }}
+        <button>Submit</button>
+    </form>
+
+{% endblock %}
+

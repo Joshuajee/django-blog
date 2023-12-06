@@ -19,4 +19,6 @@ class Posts(models.Model):
 class Author(models.Model):
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
+    email = models.EmailField(unique=True, db_index=True)
+    password = models.CharField(max_length=250)
     post_count = models.IntegerField(default=0)
