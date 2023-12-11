@@ -1,0 +1,26 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block page_title  %} Myblog {% endblock %}
+
+{% block page_css %} 
+    <link rel="stylesheet" href="{% static 'blog/css/post.css' %}" />
+{% endblock %}
+
+{% block page_content %} 
+
+    <div>
+        <img width="200px" height="200px" style="border-radius: 100%; margin-top: 50px;" />
+    </div>
+
+    <h1 >  {{ user.first_name}} {{ user.last_name}} </h3>
+
+    <h1> {{user.email}} </h3>
+
+    <form style="margin-top: 50px;">
+        Create update password form
+    </form>
+
+
+{% endblock %}
+

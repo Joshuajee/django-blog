@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponseRedirect
-from blog.models import Posts, Author
+from blog.models import Posts
 from django.db.models import F
 from .forms import SignupForm, LoginForm
 from django.contrib.auth.models import User
@@ -10,8 +10,8 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def index(req):
-    print(req.user.is_authenticated)
-    posts = Posts.objects.all().values()
+    posts = Posts.objects.all()
+    print(posts[0])
     return render(req, "blog/index.html", {
         "posts": posts,
     })
@@ -51,6 +51,7 @@ def signup(req):
             
             try:
                 User.objects.create_user(first_name=first_name, last_name=last_name, username=email, email=email, password=password)
+                return HttpResponseRedirect("/")
             except:
                 error = True
                 pass
@@ -102,13 +103,21 @@ def login_view(req):
 def logout_view(req): 
     logout(req)
     return HttpResponseRedirect("/")
-            
+
+
+
+@login_required(login_url="/login")
+def my_post(req):
+    my_posts = Posts.objects.filter(author=req.user)
+    return render(req, "blog/index.html", {
+        'posts': my_posts
+    })           
 
 @login_required(login_url="/login")
 def create_post(req):
     
     if req.method == 'POST':
-        author = req.POST['author']
+        author =  req.user
         title = req.POST['title']
         content = req.POST['content']
         new_post = Posts(author=author, title=title, content=content)
@@ -117,3 +126,13 @@ def create_post(req):
 
 
     return  render(req, "blog/create-post.html")
+
+
+@login_required(login_url="/login")
+def my_profile(req):
+    
+    #user =  User.objects.get(id= req.user.id)
+    
+    return render(req, "blog/profile.html", {
+        
+    })

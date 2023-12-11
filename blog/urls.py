@@ -7,6 +7,8 @@ urlpatterns = [
     path("top/", views.top),
     path("post/<slug:slug>", views.post),
     path("create-post", views.create_post),
+    path("my-blogs/", views.my_post),
+    path("profile/", views.my_profile),
     path("signup/", views.signup),
     path("login/", views.login_view),
     path("logout/", views.logout_view)
