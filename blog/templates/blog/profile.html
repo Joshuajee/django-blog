@@ -10,8 +10,14 @@
 {% block page_content %} 
 
     <div>
-        <img width="200px" height="200px" style="border-radius: 100%; margin-top: 50px;" />
+        <img src="/{{ user.profile_img }}" width="200px" height="200px" style="border-radius: 100%; margin-top: 50px;" />
     </div>
+
+    <form action="upload" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="profile-img" accept="image/*" />
+        <button> upload </button>
+    </form>
 
     <h1 >  {{ user.first_name}} {{ user.last_name}} </h3>
 

@@ -14,10 +14,10 @@
         <!-- Author section -->
         <div class="author-section">
 
-            <img class="profile-img" height="80px" width="80px" src="{% get_static_prefix %}blog/images/{{post.author_img}}" alt="profile"  />
+            <img class="profile-img" height="80px" width="80px"  src="/{{ post.author.profile_img }}" alt="profile"  />
 
             <div>
-                <h4>{{ post.author }}</h4>
+                <h4>{{ post.author.first_name }} {{ post.author.last_name }}</h4>
                 <h5>{{ post.date | timesince }} ago</h5>
             </div>
 

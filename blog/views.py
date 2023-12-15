@@ -2,7 +2,7 @@ from django.shortcuts import render, HttpResponseRedirect
 from blog.models import Posts
 from django.db.models import F
 from .forms import SignupForm, LoginForm
-from django.contrib.auth.models import User
+from .models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
@@ -11,7 +11,6 @@ from django.contrib.auth.decorators import login_required
 
 def index(req):
     posts = Posts.objects.all()
-    print(posts[0])
     return render(req, "blog/index.html", {
         "posts": posts,
     })
@@ -132,6 +131,19 @@ def create_post(req):
 def my_profile(req):
     
     #user =  User.objects.get(id= req.user.id)
+    
+    return render(req, "blog/profile.html", {
+        
+    })
+    
+@login_required(login_url="/login")
+def upload_profile_img(req):
+    
+    if req.method == "POST":
+        user = User.objects.get(id=req.user.id)
+        print(req.FILES['profile-img'])
+        user.profile_img = req.FILES['profile-img']
+        user.save()
     
     return render(req, "blog/profile.html", {
         

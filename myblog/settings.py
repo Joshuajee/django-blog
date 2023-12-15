@@ -145,3 +145,10 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 STATIC_ROOT = BASE_DIR / 'static/'
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
+
+MEDIA_ROOT = BASE_DIR / 'uploads'
+MEDIA_URL = ""
+
+
+
+AUTH_USER_MODEL = 'blog.User'
